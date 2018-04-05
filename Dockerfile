@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-LABEL AUTHOR=Ma Feng<mengjue@outlook.com>
+AUTHOR Ma Feng<mengjue@outlook.com>
 
 WORKDIR /root
 

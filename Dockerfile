@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-AUTHOR Ma Feng<mengjue@outlook.com>
+MAINTAINER Ma Feng<mengjue@outlook.com>
 
 WORKDIR /root
 

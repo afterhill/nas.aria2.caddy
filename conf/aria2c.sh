@@ -1,4 +1,8 @@
 #!/bin/sh
+
+killall aria2c 2>/dev/null
+killall caddy 2>/dev/null
+
 echo "Run aria2c and ariaNG" > /proc/1/fd/1 2>/proc/1/fd/2
 if [ "$ENABLE_AUTH" = "true" ]; then
   echo "Using Basic Auth config file " > /proc/1/fd/1 2>/proc/1/fd/2

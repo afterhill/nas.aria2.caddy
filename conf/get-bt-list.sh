@@ -7,3 +7,5 @@ else
     sed -i "s@bt-tracker.*@bt-tracker=$list@g" /root/conf/aria2.conf
     echo "update bt tracker list" > /proc/1/fd/1 2>/proc/1/fd/2
 fi
+
+killall crond

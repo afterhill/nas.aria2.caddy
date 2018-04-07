@@ -1,7 +1,6 @@
 #!/bin/sh
 
 killall aria2c 2>/dev/null
-# killall caddy 2>/dev/null
 
 echo "Run aria2c and ariaNG" > /proc/1/fd/1 2>/proc/1/fd/2
 if [ "$ENABLE_AUTH" = "true" ]; then
@@ -20,13 +19,11 @@ echo "Start aria2 with secure config" > /proc/1/fd/1 2>/proc/1/fd/2
 --rpc-certificate=/root/conf/key/aria2.crt \
 --rpc-private-key=/root/conf/key/aria2.key \
 --rpc-secret="$RPC_SECRET" --rpc-secure \
-# && caddy -quic --conf ${CADDY_FILE} \
 && crond -f
 
 else
 echo "Start aria2 with standard mode" > /proc/1/fd/1 2>/proc/1/fd/2
 /usr/bin/aria2c --conf-path="/root/conf/aria2.conf" -D \
 --enable-rpc --rpc-listen-all \
-# && caddy -quic --conf ${CADDY_FILE} \
 && crond -f
 fi

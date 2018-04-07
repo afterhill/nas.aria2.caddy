@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "Run aria2c and ariaNG"
+echo "Run aria2c and ariaNG" > /proc/1/fd/1 2>/proc/1/fd/2
 if [ "$ENABLE_AUTH" = "true" ]; then
   echo "Using Basic Auth config file " > /proc/1/fd/1 2>/proc/1/fd/2
   CADDY_FILE=/usr/local/caddy/SecureCaddyfile

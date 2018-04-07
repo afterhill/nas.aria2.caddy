@@ -31,7 +31,6 @@ RUN mkdir /usr/local/www/aria2/Download && cd /usr/local/www/aria2 \
  && chmod -R 755 /usr/local/www/aria2 \
  && chmod +x /root/conf/aria2c.sh \
  && chmod +x /root/conf/get-bt-list.sh \
- && ln -s /root/conf/aria2c.sh /etc/periodic/15min/ \
  && ln -s /root/conf/get-bt-list.sh /etc/periodic/hourly/
 
 #The folder to store ssl keys

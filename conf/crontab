@@ -1,0 +1,2 @@
+*/30 * * * * /root/conf/get-bt-list.sh
+*/60 * * * * /root/conf/aria2c.sh	

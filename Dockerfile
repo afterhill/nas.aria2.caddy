@@ -29,7 +29,8 @@ RUN mkdir /usr/local/www/aria2/Download && cd /usr/local/www/aria2 \
  && chmod +rw /root/conf/aria2.session \
  && wget -N --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/0.4.0/aria-ng-0.4.0.zip && unzip aria-ng-0.4.0.zip && rm -rf aria-ng-0.4.0.zip \
  && chmod -R 755 /usr/local/www/aria2 \
- && chmod +x /root/conf/aria2c.sh
+ && chmod +x /root/conf/aria2c.sh \
+ && chmod +x /root/conf/get-bt-list.sh
 
 #The folder to store ssl keys
 VOLUME /root/conf/key

@@ -9,4 +9,4 @@ else
     echo "update bt tracker list" > /proc/1/fd/1 2>/proc/1/fd/2
 fi
 
-killall caddy
+killall caddy 2>/dev/null

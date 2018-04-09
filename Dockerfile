@@ -31,7 +31,7 @@ RUN mkdir /usr/local/www/aria2/Download && cd /usr/local/www/aria2 \
  && ln -s /root/conf/get-bt-list /etc/periodic/hourly/
 
 #The folder to store ssl keys
-VOLUME /root/conf/key
+VOLUME /root/conf
 
 # For user downloaded files
 VOLUME /data

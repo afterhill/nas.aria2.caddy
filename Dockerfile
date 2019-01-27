@@ -12,7 +12,7 @@ ENV ARIA2_PWD=password
 
 RUN apk update && apk add wget bash curl openrc gnupg screen aria2 tar --no-cache
 
-RUN wget -qO- https://getcaddy.com | bash -s personal http.filemanager
+RUN curl --fail https://getcaddy.com | bash -s personal http.filemanager
 
 ADD conf /root/conf
 

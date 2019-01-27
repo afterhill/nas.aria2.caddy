@@ -24,11 +24,11 @@ RUN mkdir -p /usr/local/www && mkdir -p /usr/local/www/aria2
 #AriaNg
 RUN mkdir /usr/local/www/aria2/Download && cd /usr/local/www/aria2 \
  && chmod +rw /root/conf/aria2.session \
- && wget -N --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/0.4.0/aria-ng-0.4.0.zip && unzip aria-ng-0.4.0.zip && rm -rf aria-ng-0.4.0.zip \
+ && wget -N --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/1.0.0/AriaNg-1.0.0-AllInOne.zip && unzip AriaNg-1.0.0-AllInOne.zip && rm -rf AriaNg-1.0.0-AllInOne.zip \
  && chmod -R 755 /usr/local/www/aria2 \
  && chmod +x /root/conf/aria2c.sh \
  && chmod +x /root/conf/get-bt-list \
- && ln -s /root/conf/get-bt-list /etc/periodic/hourly/
+ && ln -s /root/conf/get-bt-list /etc/periodic/weekly/
 
 #The folder to store ssl keys
 VOLUME /root/conf
